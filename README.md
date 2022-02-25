@@ -2,7 +2,7 @@
 
 ## js-5-debrief
 
-<img src="resources/img/wheel.png" height="100" width="100"/>
+<img src="resources/img/wheel.png" height="400" width="400"/>
 
 ## In this exercise you will create your own Random Name Generator!
 
