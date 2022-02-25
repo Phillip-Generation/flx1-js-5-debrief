@@ -2,7 +2,7 @@
 
 ## js-5-debrief
 
-![](resources/img/wheel.png =100x100)
+<img src="resources/img/wheel.png" height="100" width="100")
 
 ## In this exercise you will create your own Random Name Generator!
 
