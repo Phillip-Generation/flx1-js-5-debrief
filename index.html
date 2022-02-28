@@ -7,10 +7,18 @@
   </head>
   <body>
     <h1>Random Name Generator</h1>
-    <label for="names">Insert Names Here:</label>
-    <textarea id="name-input"></textarea>
-    <label for ="amount">How many names would you like to generate?</label>
-    <input type="number" id="amount" name="amount" min="1">
+    <div id="insert">
+      <label for="names">Insert Names Here:</label>
+      <br>
+      <textarea id="nameinput" name="names" rows="10" cols="100" placeholder="Write names in the following format: Victoria, Melanie, Ashley, Mariah"></textarea>
+    </div>
+    <div id="how-many">
+      <label for ="amount">How many names would you like to generate?</label>
+      <input type="number" id="amount" name="amount" min="1">
+      <button type="submit" id="generate">Generate!</button>
+      <button type="button" id="clear">Clear Names</button>
+    </div>
+    <ol id="namelist"></ol>
     <script src="./script.js"></script>
   </body>
 </html>

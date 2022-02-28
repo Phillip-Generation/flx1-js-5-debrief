@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#insert {
+  width: 55%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+#how-many {
+  width: 55%;
+  margin: auto;
+}
+
+ol {
+  width: 55%;
+  margin:auto;
+  padding-top: 30px;
+}
