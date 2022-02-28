@@ -13,7 +13,6 @@ const listOfNames = document.getElementById('namelist');
     } else {
       for (let i = 0; i < amount; i++) {
         const randomNames = nameArray[Math.floor(Math.random() * nameArray.length)];
-        console.log(randomNames);
         const li = document.createElement('li');
         li.innerHTML = randomNames;
         listOfNames.appendChild(li);
