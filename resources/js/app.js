@@ -10,3 +10,41 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
+
+const textAreaEl = document.getElementById("name-text-area");
+const numberEl = document.getElementById("num-of-names");
+const generatorButtonEl = document.getElementById("generator-button");
+const clearButtonEl = document.getElementById("clear-button");
+const listEl = document.getElementById("name-list");
+
+
+/* Button Function
+1. Parse text area into name array
+2. Compare array length to number selection
+    a. if greater, exit and give error message
+    b. else, print as many random names as there were selected */
+
+function generateNames () {
+    let nameArray = textAreaEl.value.split(" ");
+    let numOfNames = numberEl.value;
+    if(numOfNames > nameArray.length) {
+        alert(`Please select no more than ${nameArray.length} names`);
+    } else {
+        for(let i = 0; i < numOfNames; i++) {
+            let randomIndex = Math.floor(Math.random()*nameArray.length);
+            let name = nameArray[randomIndex];
+            let newName = document.createElement("li");
+            newName.innerHTML = name;
+            listEl.appendChild(newName);
+        }
+    }
+}
+
+function clearNames () {
+    while (listEl.firstChild) {
+        listEl.removeChild(listEl.lastChild);
+    }
+}
+
+generatorButtonEl.onclick = generateNames;
+clearButtonEl.onclick = clearNames;

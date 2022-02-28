@@ -3,9 +3,15 @@
   <head>
     <title>Random Name Generator</title>
     <link rel="stylesheet" href="resources/css/style.css">
-
+    <script src="resources/js/app.js" defer></script>
   </head>
   <body>
-	
+    <h1>Random Name Generator</h1>
+    <textarea id="name-text-area" rows="4" cols="50"></textarea>
+    <label for="num-of-names">Choose number of names</label>
+    <input type="number" id="num-of-names" name="numSelect" min="0">
+    <button type="button" id="generator-button">Generate Random Names</button>
+    <button type="button" id="clear-button">Clear</button>
+    <ol id="name-list"></ol>
   </body>
 </html>
