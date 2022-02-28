@@ -4,7 +4,7 @@ const generateButton = document.getElementById('generate');
 const clearButton = document.getElementById('clear');
 const listOfNames = document.getElementById('namelist');
   
-  function myFunction() {
+  function makeList() {
     listOfNames.innerHTML = "";
     const nameArray = document.getElementById('nameinput').value.split(", ");
     const amount = document.getElementById('amount').value;
@@ -20,9 +20,9 @@ const listOfNames = document.getElementById('namelist');
     }
   }
   
-  function mySecondFunction() {
+  function clearList() {
     listOfNames.innerHTML = "";
   }
 
-generateButton.onclick = myFunction;
-clearButton.onclick = mySecondFunction;
+generateButton.onclick = makeList;
+clearButton.onclick = clearList;
