@@ -2,10 +2,32 @@
 <html lang="en">
   <head>
     <title>Random Name Generator</title>
-    <link rel="stylesheet" href="resources/css/style.css">
-
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-	
+    
+    <h1 class="tittle"> Generate Random Names </h1>
+
+    <img class="pict" src="./resources/img/wheel.png"></picture>
+
+    <div class="line">
+      <label for="names">Enter names: </label>
+      <textarea id="texArea" name="names" rows="4" cols="50"> alex, mao, vict, baba
+      </textarea>
+    </div>
+
+    <div class="line">
+      <label for="numNames">Enter number random names: </label>
+      <input type="text" id="numNames" name="numNames" rows="1" cols="5"> 
+    </div>
+
+    <div class="buttons">
+      <button id="genButton" type="button">Generate Random Names!</button>
+      <button id="clearButton" type="button">Clear Names!</button>
+    </div>
+
+    <p id="results"> Your results here...</p>
+
+      <script src="script.js"></script>
   </body>
 </html>
