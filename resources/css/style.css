@@ -1,0 +1,94 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: #C8C6C6;
+}
+
+header {
+    width: 80%;
+    text-align: center;
+    height: 4rem;
+    padding: 6rem 0 3rem 0;
+    color: #343A40;
+}
+
+h1 {
+    text-align: center;
+    margin-left: 10%;
+}
+
+.text-box {
+    width: 30%;
+    margin: 0 auto;
+}
+
+textarea {
+    height: 10rem;
+    border: 2px solid #343A40;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    background-color: #77E4D4;
+    color: #343A40;
+    /* margin-right: 10%; */
+}
+
+.label {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    color: #343A40;
+}
+
+.numberOfNames {
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 10%;
+}
+
+input {
+    background-color: #77E4D4;
+    height: 2rem;
+    width: 7rem;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #343A40;
+    border-radius: .5rem;
+    color: #343A40;
+}
+
+.centered-list {
+    margin: 4rem auto;
+    width: 7%;
+    font-size: 1.5rem;
+    color: #343A40;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 10%;
+}
+
+#generate-button {
+    background-color: #77E4D4;
+    height: 3rem;
+    width: 15rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #343A40;
+    border-radius: .5rem;
+    color: #343A40;
+}
+
+#clear-button {
+    background-color: #77E4D4;
+    height: 3rem;
+    width: 9rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #343A40;
+    border-radius: .5rem;
+    color: #343A40;
+}
