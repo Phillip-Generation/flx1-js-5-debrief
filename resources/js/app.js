@@ -32,8 +32,7 @@ const callOnMe = { generateRandomName: () => {
                 namesListElement.appendChild(li);
             }}},
     
-    clearNames: () => {
-        namesListElement.innerHTML = "";
+    clearNames: () => { namesListElement.innerHTML = "";
         }};
 
     generate.addEventListener('click', callOnMe.generateRandomName);
