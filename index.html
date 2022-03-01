@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Random Name Generator</title>
     <link rel="stylesheet" href="resources/css/style.css">
 
-  </head>
-  <body>
-	
-  </body>
+</head>
+
+<body>
+    <header>
+        <h1><strong>Random Name Generator</strong></h1>
+    </header>
+    <div class="text-box">
+        <textarea id="enter-names" name="enter-names" rows="3" cols="40"></textarea>
+
+    </div>
+
+    <div class="numberOfNames">
+        <label class="label" for="number">Click to select a number:</label>
+        <input type="number" id="number" name="number" min="1" max="6">
+    </div>
+    <div class="buttons">
+        <button id="generate-button" type="submit">Generate Random Names</button>
+        <button id="clear-button">Reset</button>
+    </div>
+    <div class="centered-list">
+        <ol id="names-list">
+
+        </ol>
+    </div>
+    <script src="./resources/js/app.js"></script>
+</body>
+
 </html>

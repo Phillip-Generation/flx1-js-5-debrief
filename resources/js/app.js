@@ -10,3 +10,41 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
+let enterName = document.getElementById('enter-names'); //text-area
+let submitButton = document.getElementById('generate-button');
+let clearButton = document.getElementById('clear-button');
+let numberInput = document.getElementById('number');
+let ol = document.getElementById('names-list');
+
+
+const generateNames = () => {
+
+    ol.innerHTML = '';
+    let nameArray = enterName.value.split(' ');
+
+    if (numberInput.value > nameArray.length) {
+        alert(' you selected a number that is greater than the number of names you entered! ');
+    } else {
+
+        for (let i = 0; i < numberInput.value; i++) {
+            let randomName = nameArray[Math.floor(Math.random() * nameArray.length)];
+            let listItem = document.createElement('li');
+            listItem.innerHTML = randomName;
+            ol.appendChild(listItem);
+            listItem.style.textAlign = 'center';
+            listItem.style.marginLeft = '-10 px';
+
+
+        }
+    }
+
+
+}
+const clearNames = () => {
+    ol.innerHTML = '';
+    numberInput.value = '';
+    enterName.value = '';
+}
+clearButton.onclick = clearNames;
+
+submitButton.onclick = generateNames;
