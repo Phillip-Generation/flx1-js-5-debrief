@@ -10,23 +10,19 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
-
-
-
-//Take the value of the text area and put into an array; Take the value of #how-many names to generate; 
 const generate = document.getElementById('generate-button');
-    const clear = document.getElementById('clear-button');
-    let names = document.getElementById('names');
-    let inputElement = document.getElementById('how-many');
-    let namesListElement = document.getElementById('names-list');
+const clear = document.getElementById('clear-button');
+let names = document.getElementById('names');
+let inputElement = document.getElementById('how-many');
+let namesListElement = document.getElementById('names-list');
 
-const callOnMe = {
-    generateRandomName: () => {
+const callOnMe = { generateRandomName: () => {
+        
         let myArray = names.value.split(" ");
         let numOfNames = inputElement.value;
         namesListElement.innerHTML = "";
-        if (numOfNames > myArray.length) {
-            alert('Please enter a number less than ' + myArray.length);
+        
+        if (numOfNames > myArray.length) { alert('Please enter a number less than ' + myArray.length);
         } else {
             for (let i = 0; i < numOfNames; i++) {
                 let randomName = myArray[Math.floor(Math.random() * myArray.length)];
@@ -40,7 +36,7 @@ const callOnMe = {
         namesListElement.innerHTML = "";
         }};
 
+    generate.addEventListener('click', callOnMe.generateRandomName);
+    clear.addEventListener('click', callOnMe.clearNames);
 
 
-generate.addEventListener('click', callOnMe.generateRandomName);
-clear.addEventListener('click', callOnMe.clearNames);
