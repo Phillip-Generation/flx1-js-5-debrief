@@ -19,22 +19,33 @@ let clearButton = document.getElementById('clearButton')
 let ol = document.getElementById('names-ol');
 
 console.log(`You've entered the following text: ${namesText.value}`);
-console.log(`The array is ${namesArray}`);
+console.log(`The array is: ${namesArray}`);
+
+// get value of textarea on change
+namesText.addEventListener('input', function handleChange(event) {
+    console.log(event.target);
+    console.log(event.target.value);
+    namesText = document.getElementById('names');
+    namesArray = namesText.value.split(' ');
+    
+
+    console.log(`You've entered the following text: ${namesText.value}`);
+    console.log(`The array is: ${namesArray}`);
+  });
 
 const generateNames = () => {
     ol.innerHTML = '';
 
-    if(numOfRndNames.value <= namesArray.length) {
+    if(isNaN(numOfRndNames.value) || numOfRndNames.value < 1 || numOfRndNames.value > namesArray.length){
+        alert('Please select a natural number smaller than your list of names')
+    } else if(numOfRndNames.value <= namesArray.length) {
         for (let i = 0; i < numOfRndNames.value; i++) {
             let rndName = namesArray[Math.floor(Math.random() * namesArray.length)];
             let listItem = document.createElement('li');
             listItem.innerHTML = rndName;
             ol.appendChild(listItem);
         }
-
-    } else {
-        alert('Please select a number smaller than your list of names')
-    }
+    } 
     
 }
 
