@@ -1,6 +1,5 @@
 # Random Name Generator using HTML, CSS and Javascript
-
-  ![2022-03-01](https://user-images.githubusercontent.com/95151579/156288180-2c9513ee-0df8-45b1-8cce-132fe1c24d06.png)
+  ![2022-03-01](https://user-images.githubusercontent.com/95151579/156288884-0543c34d-dc92-4570-ac7b-c425de2c145e.png)
 
  [View Demo](http://berserk-view.surge.sh/)
 
