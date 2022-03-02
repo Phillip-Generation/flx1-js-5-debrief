@@ -10,3 +10,49 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
+
+let namesText = document.getElementById('names');
+let namesArray = namesText.value.split(' ');
+let numOfRndNames = document.getElementById('inputNum');
+let rndNameGenBtn = document.getElementById('genRndButton');
+let clearButton = document.getElementById('clearButton')
+let ol = document.getElementById('names-ol');
+
+console.log(`You've entered the following text: ${namesText.value}`);
+console.log(`The array is: ${namesArray}`);
+
+// get value of textarea on change
+namesText.addEventListener('input', function handleChange(event) {
+    console.log(event.target);
+    console.log(event.target.value);
+    namesText = document.getElementById('names');
+    namesArray = namesText.value.split(' ');
+    
+
+    console.log(`You've entered the following text: ${namesText.value}`);
+    console.log(`The array is: ${namesArray}`);
+  });
+
+const generateNames = () => {
+    ol.innerHTML = '';
+
+    if(isNaN(numOfRndNames.value) || numOfRndNames.value < 1 || numOfRndNames.value > namesArray.length){
+        alert('Please select a natural number smaller than your list of names')
+    } else if(numOfRndNames.value <= namesArray.length) {
+        for (let i = 0; i < numOfRndNames.value; i++) {
+            let rndName = namesArray[Math.floor(Math.random() * namesArray.length)];
+            let listItem = document.createElement('li');
+            listItem.innerHTML = rndName;
+            ol.appendChild(listItem);
+        }
+    } 
+    
+}
+
+const clearNames = () => {
+    ol.innerHTML = '';
+
+}
+
+rndNameGenBtn.onclick = generateNames;
+clearButton.onclick = clearNames;
