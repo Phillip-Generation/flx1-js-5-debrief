@@ -10,3 +10,32 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
+function myFunction() { 
+
+    let nameArea = document.getElementById("namesRandom").value;
+    let numberArea = document.getElementById("numberRandom").value;  
+    const myArray = nameArea.split(" ");
+    let result = "";
+
+    if (numberArea > myArray.length) {
+        document.getElementById("nameArea1").innerHTML = "The numbered entered by the user is larger than the amount of names entered";
+        return;
+    }   else if (numberArea <= 0) {
+        document.getElementById("nameArea1").innerHTML = "The numbered entered by the user is less or equals 0";
+        return;
+    } else {
+        document.getElementById("nameArea1").innerHTML=""; 
+    }
+
+    for (let i = 0; i < numberArea; i++)    {
+        let j = Math.floor(Math.random() * myArray.length);
+        result += myArray[j] + "<br>";
+        console.log(result);
+    }
+    document.getElementById("randomNames").innerHTML = result;   
+  }
+
+  function myFunction1()    {
+    document.getElementById("randomNames").innerHTML = ""; 
+    document.getElementById("inform").reset();
+  }
