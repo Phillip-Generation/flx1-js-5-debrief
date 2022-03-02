@@ -1,3 +1,38 @@
+let Name = document.getElementById('Name').value;
+
+let clearButton = document.getElementById('clearButton');
+
+
+let clearNames = ()=>{
+    document.getElementById('Name').innerHTML='';
+};
+
+
+clearButton.onclick=clearNames;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
 // Your application should meet the requirements listed below:
 // 1. Allows users to enter names into a text box.
 // 2. Allows users the enter the number of random names they want into a text box.
