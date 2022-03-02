@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
   <head>
     <title>Random Name Generator</title>
-    <link rel="stylesheet" href="resources/css/style.css">
-
+    <link rel="stylesheet" href = "resources/css/style.css"> 
+    <script src = "resources/js/app.js"></script>   
   </head>
   <body>
-	
+
+    <form id = "inform" action = "/resources/js/app.js">
+      <label for = "namesRandom">Enter names into a text box:</label>
+      <textarea type = "text" id = "namesRandom" name = "namesRandom" rows = "10" cols = "100"></textarea><br><br>
+      <label for = "numberRandom"> Enter the number of random names:</label>
+      <input type = "number" id = "numberRandom" name = "numberRandom"><br><br>
+    </form>
+
+    <button value = "Submit" onclick = "myFunction()">Generate Random Names<br>
+      <img src="resources/img/wheel.png" alt="wheel" width="100" height="100">
+    </button><br><br>
+
+    <p id = "nameArea1"></p>
+    <p id = "randomNames"></p>
+
+    <button value = "Reset" onclick = "myFunction1()">RESET</button>
+  
   </body>
 </html>
