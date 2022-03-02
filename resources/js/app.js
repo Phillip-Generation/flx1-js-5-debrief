@@ -10,3 +10,32 @@
 // 8. The application should have a simple, visually pleasing design
 // Note: Do not spend too much time on design. Focus primarily on functionality(i.e. steps 1-8).
 // Be sure to check the helpful links in the README.
+const generate = document.getElementById('generate-button');
+const clear = document.getElementById('clear-button');
+let names = document.getElementById('names');
+let inputElement = document.getElementById('how-many');
+let namesListElement = document.getElementById('names-list');
+
+const callOnMe = { generateRandomName: () => {
+        
+        let myArray = names.value.split(" ");
+        let numOfNames = inputElement.value;
+        namesListElement.innerHTML = "";
+        
+        if (numOfNames > myArray.length) { alert('Please enter a number less than ' + myArray.length);
+        } else {
+            for (let i = 0; i < numOfNames; i++) {
+                let randomName = myArray[Math.floor(Math.random() * myArray.length)];
+                const li = document.createElement('li');
+                li.innerHTML = randomName;
+                li.classList.add('alert', 'alert-primary');
+                namesListElement.appendChild(li);
+            }}},
+    
+    clearNames: () => { namesListElement.innerHTML = "";
+        }};
+
+    generate.addEventListener('click', callOnMe.generateRandomName);
+    clear.addEventListener('click', callOnMe.clearNames);
+
+

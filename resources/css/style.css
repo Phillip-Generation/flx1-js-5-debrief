@@ -1,0 +1,7 @@
+body {
+  background-color: rgb(184, 208, 245);
+}
+
+#names-list ul {
+  list-style-type: none;
+}
