@@ -3,9 +3,21 @@
   <head>
     <title>Random Name Generator</title>
     <link rel="stylesheet" href="resources/css/style.css">
-
+    
   </head>
   <body>
-	
+  <h1>Random Name Generator</h1>
+  <label for="names">Enter names here</label>
+  <textarea name="txtarea-names" id="txtarea-names" cols="50" rows="10" ></textarea>
+  <label for="number">Enter number</label>
+  <input type="text" id ="text-number">
+  <br>
+  <input type="button" id="button-gen-names" value="Generate Random Names">
+  <input type="button" id="button-clr" value="Clear">
+  <div>
+    <ol id = 'names-list'></ol>
+  </div>
+ 
+	<script src = "randomNames.js" type="text/javascript"></script>
   </body>
 </html>
