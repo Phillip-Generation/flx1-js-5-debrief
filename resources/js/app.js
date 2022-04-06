@@ -32,7 +32,7 @@ const generateNames = () => {
             listItem.innerHTML = randomName;
             ol.appendChild(listItem);
             listItem.style.textAlign = 'center';
-            listItem.style.marginLeft = '-10 px';
+
 
 
         }
