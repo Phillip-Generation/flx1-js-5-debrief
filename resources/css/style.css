@@ -1,5 +1,7 @@
 body {
   font-family:'Gochi Hand', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #D18CE0;
   background-image: url('/resources/img/v882batch2-kul-13f.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
@@ -12,13 +14,13 @@ h1 {
 }
 
 #insert {
-  width: 55%;
+  width: fit-content;
   margin: auto;
   padding-bottom: 50px;
 }
 
 #how-many {
-  width: 55%;
+  width: fit-content;
   margin: auto;
 }
 
@@ -26,4 +28,17 @@ ol {
   width: 55%;
   margin:auto;
   padding-top: 30px;
+  color: #7882A4;
+  font-size: 24px;
+}
+
+footer {
+  width: fit-content;
+  margin: auto;
+}
+
+#attribution {
+  color: #8D8DAA;
+  font-size: 16px;
+  text-decoration: none;
 }
