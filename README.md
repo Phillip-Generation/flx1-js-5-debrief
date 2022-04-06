@@ -9,4 +9,6 @@ This project can take in a list of names and display a number of random names. W
 * CSS
 * JavaScript
 
+<hr>
+
 [Deployed site](https://victoriafreder.github.io/random-name-generator/)
